@@ -6,6 +6,12 @@ spring:
 # HTTP Server
 server:
   port: 2222   # HTTP (Tomcat) port
+  contextPath: /resource
+
+security:
+  oauth2:
+    resource:
+      userInfoUri: http://localhost:9000/hascode/user
 
 # Discovery Server Access
 #  1. DEV ONLY: Reduce the lease renewal interval to speed up registration
