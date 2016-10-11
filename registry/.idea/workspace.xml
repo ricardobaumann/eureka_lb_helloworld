@@ -2,15 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="b087e2a0-7eb3-4789-a970-0f74ed3fa435" name="Default" comment="">
-      <change type="DELETED" beforePath="$PROJECT_DIR$/../auth/src/main/resources/application.properties" afterPath="" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../auth/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../auth/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../auth/src/main/java/com/github/ricardobaumann/eureka/Oauth2AuthorizationServerApplication.java" afterPath="$PROJECT_DIR$/../auth/src/main/java/com/github/ricardobaumann/eureka/Oauth2AuthorizationServerApplication.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../content/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../content/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../content/content.iml" afterPath="$PROJECT_DIR$/../content/content.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../content/pom.xml" afterPath="$PROJECT_DIR$/../content/pom.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../content/src/main/java/com/github/ricardobaumann/eureka/Application.java" afterPath="$PROJECT_DIR$/../content/src/main/java/com/github/ricardobaumann/eureka/Application.java" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../content/src/main/resources/content.yml" afterPath="$PROJECT_DIR$/../content/src/main/resources/content.yml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="registry.iws" />
     <ignored path=".idea/workspace.xml" />

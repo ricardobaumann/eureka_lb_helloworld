@@ -11,7 +11,8 @@ server:
 security:
   oauth2:
     resource:
-      userInfoUri: http://localhost:9000/hascode/user
+      loadBalanced: true
+      userInfoUri: http://auth/hascode/user
 
 # Discovery Server Access
 #  1. DEV ONLY: Reduce the lease renewal interval to speed up registration
