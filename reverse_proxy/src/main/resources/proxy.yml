@@ -7,11 +7,6 @@ spring:
 server:
   port: 4444   # HTTP (Tomcat) port
 
-zuul:
-  sensitiveHeaders: Cookie,Set-Cookie
-
-
-
 ribbon:
   eureka:
     enabled: true
@@ -36,5 +31,5 @@ eureka:
 #     instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}}
 
 
-
-
+zuul:
+  sensitive-headers: Cookie,Set-Cookie
