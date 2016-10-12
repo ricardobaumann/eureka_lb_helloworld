@@ -1,5 +1,5 @@
 # eureka_lb_helloworld
-A micro-services hello world application, combining load balancer, authentication, authorization and service discovery
+A micro-services hello world application, combining load balancer,reverse-proxy, authentication, authorization and service discovery
 
 ## Installation
 1. Clone repo
