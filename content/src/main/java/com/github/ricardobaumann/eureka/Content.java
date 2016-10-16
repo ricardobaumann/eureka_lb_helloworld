@@ -5,9 +5,9 @@ package com.github.ricardobaumann.eureka;
  */
 public class Content {
 
-    private Long id =1L;
+    private Long id;
 
-    private String text = "text";
+    private String text;
 
     public Long getId() {
         return id;
