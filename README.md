@@ -13,3 +13,9 @@ A micro-services hello world application, combining load balancer, authenticatio
 2. Use content service
 
 `curl -H "Authorization: Bearer 7545f727-5f4a-4633-9275-542f07ddf881" -H "Content-type: application/json" http://localhost:2222/resource/content`
+
+## Docker support
+1. Install docker and docker-compose
+2. On the root folder run
+
+`docker-compose up`
