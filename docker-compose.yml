@@ -1,43 +1,43 @@
 version: '2'
 services:
-    registry:
+    registry_service:
         build: registry
         image: eureka/registry
         ports:
           - 1111:1111
-    proxy:
+    proxy_service:
         build: reverse_proxy
         image: eureka/proxy:3
         ports:
           - 4444:4444
         depends_on:
-          - registry
+          - registry_service
         links:
-          - registry
-    auth:
+          - registry_service:registry
+    auth_service:
         build: auth
         image: eureka/auth
         ports:
           - 9000:9000
         depends_on:
-          - registry
+          - registry_service
         links:
-          - registry
-    content:
+          - registry_service:registry
+    content_service:
         build: content
         image: eureka/content:4
         ports:
           - 2222:2222
         depends_on:
-          - registry
+          - registry_service
         links:
-          - registry
-    insecure:
+          - registry_service:registry
+    insecure_service:
         build: insecure
         image: eureka/insecure:4
         ports:
           - 5000:5000
         depends_on:
-          - registry
+          - registry_service
         links:
-          - registry
+          - registry_service:registry
