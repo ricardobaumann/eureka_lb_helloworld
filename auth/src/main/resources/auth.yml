@@ -1,3 +1,7 @@
+spring:
+    profiles: default
+    application:
+        name: auth
 eureka:
     client:
         serviceUrl:
@@ -17,6 +21,29 @@ security:
 server:
     contextPath: /hascode
     port: 9000
+
+---
+
 spring:
+    profiles: docker
     application:
         name: auth
+eureka:
+    client:
+        serviceUrl:
+            defaultZone: http://registry:1111/eureka/
+    instance:
+        leaseRenewalIntervalInSeconds: 5
+security:
+    oauth2:
+        client:
+            authorized-grant-types: authorization_code,refresh_token,password
+            clientId: foo
+            clientSecret: foosecret
+            scope: openid
+    user:
+        name: bar
+        password: barsecret
+server:
+    contextPath: /hascode
+    port: 9000
