@@ -7,7 +7,7 @@ services:
           - 1111:1111
     proxy_service:
         build: reverse_proxy
-        image: eureka/proxy:3
+        image: eureka/proxy
         ports:
           - 4444:4444
         depends_on:
@@ -25,7 +25,7 @@ services:
           - registry_service:registry
     content_service:
         build: content
-        image: eureka/content:4
+        image: eureka/content
         ports:
           - 2222:2222
         depends_on:
@@ -34,7 +34,7 @@ services:
           - registry_service:registry
     insecure_service:
         build: insecure
-        image: eureka/insecure:4
+        image: eureka/insecure
         ports:
           - 5000:5000
         depends_on:
