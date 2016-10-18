@@ -17,8 +17,6 @@ services:
     auth_service:
         build: auth
         image: eureka/auth
-        ports:
-          - 9000:9000
         depends_on:
           - registry_service
         links:
@@ -26,8 +24,6 @@ services:
     content_service:
         build: content
         image: eureka/content
-        ports:
-          - 2222:2222
         depends_on:
           - registry_service
         links:
@@ -35,8 +31,6 @@ services:
     insecure_service:
         build: insecure
         image: eureka/insecure
-        ports:
-          - 5000:5000
         depends_on:
           - registry_service
         links:

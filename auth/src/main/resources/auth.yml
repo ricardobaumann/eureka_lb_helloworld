@@ -33,7 +33,7 @@ eureka:
         serviceUrl:
             defaultZone: http://registry:1111/eureka/
     instance:
-        leaseRenewalIntervalInSeconds: 5
+        leaseRenewalIntervalInSeconds: 30
 security:
     oauth2:
         client:

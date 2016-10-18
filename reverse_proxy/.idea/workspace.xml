@@ -3,10 +3,17 @@
   <component name="ChangeListManager">
     <list default="true" id="27e0fde6-0fdd-4de5-83b1-e2781ede1a4e" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../auth/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../auth/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../auth/Dockerfile" afterPath="$PROJECT_DIR$/../auth/Dockerfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../auth/src/main/resources/auth.yml" afterPath="$PROJECT_DIR$/../auth/src/main/resources/auth.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../content/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../content/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../content/src/main/resources/content.yml" afterPath="$PROJECT_DIR$/../content/src/main/resources/content.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../docker-compose.yml" afterPath="$PROJECT_DIR$/../docker-compose.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../insecure/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../insecure/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../insecure/Dockerfile" afterPath="$PROJECT_DIR$/../insecure/Dockerfile" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../insecure/src/main/resources/insecure.yml" afterPath="$PROJECT_DIR$/../insecure/src/main/resources/insecure.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../registry/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../registry/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/proxy.yml" afterPath="$PROJECT_DIR$/src/main/resources/proxy.yml" />
     </list>
     <ignored path="reverse_proxy.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -38,7 +45,7 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Proxy.java" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Proxy.java" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/com/github/com/ricardobaumann/eureka/Proxy.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="-36">
@@ -50,11 +57,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="proxy.yml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="proxy.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/proxy.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="600">
-              <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
+            <state relative-caret-position="180">
+              <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
               <folding />
             </state>
           </provider>
@@ -567,14 +574,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/proxy.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="600">
-          <caret line="40" column="18" selection-start-line="40" selection-start-column="18" selection-end-line="40" selection-end-column="18" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/main/java/com/github/com/ricardobaumann/eureka/Proxy.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="-36">
@@ -582,6 +581,14 @@
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/proxy.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="180">
+          <caret line="22" column="37" selection-start-line="22" selection-start-column="37" selection-end-line="22" selection-end-column="37" />
+          <folding />
         </state>
       </provider>
     </entry>
