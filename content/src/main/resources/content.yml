@@ -59,6 +59,8 @@ security:
 eureka:
   instance:
     preferIpAddress: true
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
   client:
     registryFetchIntervalSeconds: 5
     instanceInfoReplicationIntervalSeconds: 5

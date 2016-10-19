@@ -7,4 +7,5 @@ eureka:
     fetchRegistry: false
 
 server:
+  enableSelfPreservation: false
   port: 1111   # HTTP (Tomcat) port
