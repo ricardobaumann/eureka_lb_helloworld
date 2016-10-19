@@ -3,5 +3,5 @@ COPY / insecure/
 
 WORKDIR insecure
 RUN mvn clean package
-EXPOSE 2222
+EXPOSE 5000
 CMD mvn spring-boot:run -DskipTests=true -Dspring.profiles.active=docker

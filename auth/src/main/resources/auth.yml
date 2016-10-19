@@ -29,11 +29,14 @@ spring:
     application:
         name: auth
 eureka:
-    client:
-        serviceUrl:
-            defaultZone: http://registry:1111/eureka/
-    instance:
-        leaseRenewalIntervalInSeconds: 5
+  instance:
+    preferIpAddress: true
+  client:
+    registryFetchIntervalSeconds: 5
+    instanceInfoReplicationIntervalSeconds: 5
+    initialInstanceInfoReplicationIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: http://registry:1111/eureka/
 security:
     oauth2:
         client:
