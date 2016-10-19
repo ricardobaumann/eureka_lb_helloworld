@@ -57,11 +57,14 @@ security:
 #  1. DEV ONLY: Reduce the lease renewal interval to speed up registration
 #  2. Define URL of registration server (defaultZone)
 eureka:
+  instance:
+    preferIpAddress: true
   client:
+    registryFetchIntervalSeconds: 5
+    instanceInfoReplicationIntervalSeconds: 5
+    initialInstanceInfoReplicationIntervalSeconds: 5
     serviceUrl:
       defaultZone: http://registry:1111/eureka/
-  instance:
-    leaseRenewalIntervalInSeconds: 30   # DO NOT DO THIS IN PRODUCTION
 
 #  3. If using the Angel release-train ONLY, give the process a unique instance id
 #     so that multiple instances can register when running on SAME host.  This is

@@ -7,7 +7,7 @@ services:
           - 1111:1111
     proxy_service:
         build: reverse_proxy
-        image: eureka/proxy
+        image: eureka/proxy:1
         ports:
           - 4444:4444
         depends_on:
