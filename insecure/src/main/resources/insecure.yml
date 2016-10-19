@@ -6,7 +6,8 @@ spring:
 
 # HTTP Server
 server:
-  port: 5000   # HTTP (Tomcat) port
+  port: 5000
+  # HTTP (Tomcat) port
 
 security:
   oauth2:

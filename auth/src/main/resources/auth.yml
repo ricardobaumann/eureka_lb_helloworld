@@ -30,6 +30,8 @@ spring:
         name: auth
 eureka:
   instance:
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
     preferIpAddress: true
   client:
     registryFetchIntervalSeconds: 5

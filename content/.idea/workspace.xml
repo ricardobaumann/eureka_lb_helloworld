@@ -22,7 +22,7 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="true">
+      <file leaf-file-name="pom.xml" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/pom.xml">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="255">
@@ -44,11 +44,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="content.yml" pinned="false" current-in-tab="false">
+      <file leaf-file-name="content.yml" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/resources/content.yml">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="180">
-              <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="60" selection-end-column="25" />
+            <state relative-caret-position="-23">
+              <caret line="62" column="4" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="4" />
               <folding />
             </state>
           </provider>
@@ -106,8 +106,8 @@
         <option value="$PROJECT_DIR$/src/main/java/com/github/ricardobaumann/eureka/Application.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/ricardobaumann/eureka/Content.java" />
         <option value="$PROJECT_DIR$/src/main/java/com/github/ricardobaumann/eureka/ContentController.java" />
-        <option value="$PROJECT_DIR$/src/main/resources/content.yml" />
         <option value="$PROJECT_DIR$/pom.xml" />
+        <option value="$PROJECT_DIR$/src/main/resources/content.yml" />
       </list>
     </option>
   </component>
@@ -1132,18 +1132,18 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/resources/content.yml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="180">
-          <caret line="58" column="0" selection-start-line="58" selection-start-column="0" selection-end-line="60" selection-end-column="25" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="255">
           <caret line="86" column="21" selection-start-line="86" selection-start-column="21" selection-end-line="86" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/main/resources/content.yml">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="-23">
+          <caret line="62" column="4" selection-start-line="62" selection-start-column="4" selection-end-line="62" selection-end-column="4" />
           <folding />
         </state>
       </provider>
