@@ -16,21 +16,14 @@ services:
           - registry_service:registry
     auth_service:
         build: auth
-        image: eureka/auth
-        depends_on:
-          - registry_service
-        links:
-          - registry_service:registry
-    content_service:
-        build: content
-        image: eureka/content
+        image: eureka/auth:7
         depends_on:
           - registry_service
         links:
           - registry_service:registry
     insecure_service:
         build: insecure
-        image: eureka/insecure
+        image: eureka/insecure:7
         depends_on:
           - registry_service
         links:
