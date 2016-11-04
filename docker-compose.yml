@@ -35,3 +35,11 @@ services:
           - registry_service
         links:
           - registry_service:registry
+    sidecar:
+        build: sidecar
+        image: eureka/sidecar
+        depends_on:
+          - registry_service
+        links:
+          - registry_service:registry
+

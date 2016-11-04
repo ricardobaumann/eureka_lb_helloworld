@@ -27,3 +27,34 @@ eureka:
 
 sidecar:
   port: 8080
+
+---
+ # Spring properties
+spring:
+  profiles: docker
+  application:
+     name: sidecar  # Service registers under this name
+
+# HTTP Server
+server:
+  port: 6666   # HTTP (Tomcat) port
+  contextPath: /resource
+
+security:
+  oauth2:
+    resource:
+      loadBalanced: true
+      userInfoUri: http://auth/hascode/user
+
+# Discovery Server Access
+#  1. DEV ONLY: Reduce the lease renewal interval to speed up registration
+#  2. Define URL of registration server (defaultZone)
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://registry:1111/eureka/
+  instance:
+    leaseRenewalIntervalInSeconds: 5   # DO NOT DO THIS IN PRODUCTION
+
+sidecar:
+  port: 8080
