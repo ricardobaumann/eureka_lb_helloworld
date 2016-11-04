@@ -10,6 +10,8 @@ A micro-services hello world application, combining load balancer,reverse-proxy,
 2. content: Main microservice, because we need to access some something :)
 3. registry: Eureka registration microservice
 4. proxy: Reverse proxy to enable access to both content and auth through the same url
+5. insecure: Another simple microservice, but this guys doest not require authentication
+6. sidecar: A non-JVM microservice, using a nodejs simple application registered through the sidecar module. 
 
 ## Usage
 1. Authenticate
