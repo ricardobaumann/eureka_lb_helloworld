@@ -2,14 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="57698a47-9753-4fb5-80cc-41dc5de70f5c" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/Dockerfile" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../auth/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../auth/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../content/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../content/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../docker-compose.yml" afterPath="$PROJECT_DIR$/../docker-compose.yml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../registry/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../registry/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/../reverse_proxy/.idea/workspace.xml" afterPath="$PROJECT_DIR$/../reverse_proxy/.idea/workspace.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/main/resources/sidecar.yml" afterPath="$PROJECT_DIR$/src/main/resources/sidecar.yml" />
     </list>
     <ignored path="sidecar.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -596,7 +593,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="0" y="23" width="1440" height="873" extended-state="0" />
+    <frame x="0" y="23" width="1440" height="873" extended-state="6" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
