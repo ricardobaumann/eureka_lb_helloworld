@@ -12,7 +12,7 @@ A micro-services hello world application, combining load balancer,reverse-proxy,
 4. proxy: Reverse proxy to enable access to both content and auth through the same url
 5. insecure: Another simple microservice, but this guys doest not require authentication
 6. sidecar: A non-JVM microservice, using a nodejs simple application registered through the sidecar module. 
-7. config-microservice: 
+7. config-microservice: configuration microservice, pulling properties from github and used by insecure service
 
 ## Usage
 1. Authenticate
