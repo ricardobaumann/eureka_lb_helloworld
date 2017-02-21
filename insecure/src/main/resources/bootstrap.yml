@@ -1,32 +1,17 @@
-# Spring properties
 spring:
   profiles: default
   application:
-     name: insecure  # Service registers under this name
+    name: insecure
   cloud:
     config:
-      uri: http://192.168.99.100:8888
-
-# HTTP Server
-server:
-  port: 5000
-  # HTTP (Tomcat) port
-
-security:
-  oauth2:
-    resource:
-      loadBalanced: true
-      userInfoUri: http://auth/hascode/user
+      uri: http://localhost:8888 #it doesnt support loadbalanced config server so far
+encrypt:
+  failOnError: false
 
 # Discovery Server Access
 #  1. DEV ONLY: Reduce the lease renewal interval to speed up registration
 #  2. Define URL of registration server (defaultZone)
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://localhost:1111/eureka/
-  instance:
-    leaseRenewalIntervalInSeconds: 5   # DO NOT DO THIS IN PRODUCTION
+
 
 #  3. If using the Angel release-train ONLY, give the process a unique instance id
 #     so that multiple instances can register when running on SAME host.  This is
