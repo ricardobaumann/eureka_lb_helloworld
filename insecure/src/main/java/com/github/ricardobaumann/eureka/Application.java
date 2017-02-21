@@ -1,9 +1,11 @@
 package com.github.ricardobaumann.eureka;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 import org.springframework.cloud.client.discovery.EnableDiscoveryClient;
+import org.springframework.core.env.Environment;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
@@ -31,10 +33,13 @@ public class Application {
         SpringApplication.run(Application.class, args);
     }
 
+    @Autowired
+    private Environment environment;
+
     @RequestMapping(method = RequestMethod.GET)
     public Something get() {
         Something something = new Something();
-        something.setText("hehey");
+        something.setText(environment.getProperty("test"));
         return something;
     }
 
