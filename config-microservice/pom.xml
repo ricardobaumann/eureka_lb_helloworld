@@ -20,7 +20,7 @@
 
 
     <properties>
-        <docker.image.prefix>kbastani</docker.image.prefix>
+        <docker.image.prefix>ricardobaumann</docker.image.prefix>
         <start-class>services.Application</start-class>
     </properties>
 
