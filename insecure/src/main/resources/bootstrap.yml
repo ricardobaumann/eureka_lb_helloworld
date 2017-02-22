@@ -29,6 +29,9 @@ spring:
   profiles: docker
   application:
      name: insecure  # Service registers under this name
+  cloud:
+      config:
+        uri: http://configserver:8888
 
 # HTTP Server
 server:
