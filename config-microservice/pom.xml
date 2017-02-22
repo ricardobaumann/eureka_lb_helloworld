@@ -21,7 +21,7 @@
 
     <properties>
         <docker.image.prefix>ricardobaumann</docker.image.prefix>
-        <start-class>services.Application</start-class>
+        <start-class>services.ConfigServerApplication</start-class>
     </properties>
 
     <dependencies>
