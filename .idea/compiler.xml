@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <resourceExtensions />
+    <wildcardResourcePatterns>
+      <entry name="!?*.java" />
+      <entry name="!?*.form" />
+      <entry name="!?*.class" />
+      <entry name="!?*.groovy" />
+      <entry name="!?*.scala" />
+      <entry name="!?*.flex" />
+      <entry name="!?*.kt" />
+      <entry name="!?*.clj" />
+      <entry name="!?*.aj" />
+    </wildcardResourcePatterns>
+    <annotationProcessing>
+      <profile default="true" name="Default" enabled="false">
+        <processorPath useClasspath="true" />
+      </profile>
+      <profile default="false" name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <processorPath useClasspath="true" />
+        <module name="eureka_lb_helloworld_auth" />
+        <module name="eureka_lb_helloworld_content" />
+        <module name="eureka_lb_helloworld_insecure" />
+        <module name="eureka_lb_helloworld_registry" />
+        <module name="eureka_lb_helloworld_reverse_proxy" />
+        <module name="sidecar" />
+      </profile>
+    </annotationProcessing>
+    <bytecodeTargetLevel>
+      <module name="config_service" target="1.7" />
+      <module name="eureka_lb_helloworld_auth" target="1.8" />
+      <module name="eureka_lb_helloworld_content" target="1.8" />
+      <module name="eureka_lb_helloworld_insecure" target="1.8" />
+      <module name="eureka_lb_helloworld_registry" target="1.8" />
+      <module name="eureka_lb_helloworld_reverse_proxy" target="1.8" />
+      <module name="sidecar" target="1.8" />
+      <module name="spring-cloud" target="1.5" />
+    </bytecodeTargetLevel>
+  </component>
+</project>

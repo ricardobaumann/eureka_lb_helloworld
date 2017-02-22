@@ -27,14 +27,14 @@ services:
           - registry_service
         links:
           - registry_service:registry
-          - config_service:config
+          - config_service:configserver
     insecure_service:
             build: insecure
             depends_on:
               - registry_service
             links:
               - registry_service:registry
-              - config_service:config
+              - config_service:configserver
     sidecar:
         build: sidecar
         image: eureka/sidecar
@@ -43,7 +43,7 @@ services:
         links:
           - registry_service:registry
     config_service:
-        image: hyness/spring-cloud-config-server
+        build: config-microservice
         links:
           - registry_service:registry
         environment:

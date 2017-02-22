@@ -18,7 +18,7 @@ import org.springframework.web.bind.annotation.RestController;
 @SpringBootApplication
 @RestController
 @RequestMapping(produces = "application/json")
-public class Application {
+public class InsecureApplication {
 
     /**
      * Run the application using Spring Boot and an embedded servlet engine.
@@ -30,7 +30,7 @@ public class Application {
         // Tell server to look for registration.properties or registration.yml
         System.setProperty("spring.config.name", "insecure");
 
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(InsecureApplication.class, args);
     }
 
     @Autowired
