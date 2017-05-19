@@ -6,6 +6,8 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.security.Principal;
+
 /**
  * Created by ricardobaumann on 10/10/16.
  */
@@ -19,7 +21,9 @@ public class ContentController {
     }
 
     @RequestMapping(method = RequestMethod.POST)
-    public Content post(@RequestBody  Content content) {
+    public Content post(@RequestBody  Content content, Principal principal) {
+
+        content.setUsername(principal.getName());
         return content;
     }
 

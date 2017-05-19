@@ -14,20 +14,20 @@ services:
           - registry_service
         links:
           - registry_service:registry
-    auth_service:
-        build: auth
-        image: eureka/auth:8
-        depends_on:
-          - registry_service
-        links:
-          - registry_service:registry
-    content_service:
-        build: content
-        depends_on:
-          - registry_service
-        links:
-          - registry_service:registry
-          - config_service:configserver
+    #auth_service:
+    #    build: auth
+    #    image: eureka/auth:8
+    #    depends_on:
+    #      - registry_service
+    #    links:
+    #      - registry_service:registry
+    #content_service:
+    #    build: content
+    #    depends_on:
+    #      - registry_service
+    #    links:
+    #      - registry_service:registry
+    #      - config_service:configserver
     insecure_service:
             build: insecure
             depends_on:
@@ -35,13 +35,13 @@ services:
             links:
               - registry_service:registry
               - config_service:configserver
-    sidecar:
-        build: sidecar
-        image: eureka/sidecar
-        depends_on:
-          - registry_service
-        links:
-          - registry_service:registry
+    #sidecar:
+    #    build: sidecar
+    #    image: eureka/sidecar
+    #    depends_on:
+    #      - registry_service
+    #    links:
+    #      - registry_service:registry
     config_service:
         build: config-microservice
         links:
