@@ -1,5 +1,6 @@
 package com.github.ricardobaumann.eureka;
 
+import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.MediaType;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
@@ -15,6 +16,9 @@ import java.security.Principal;
 @RequestMapping(value = "/content", consumes = "application/json", produces = "application/json")
 public class ContentController {
 
+    @Autowired
+    private InsecureClient insecureClient;
+
     @RequestMapping(method = RequestMethod.GET)
     public Content getContent() {
         return new Content();
@@ -22,6 +26,8 @@ public class ContentController {
 
     @RequestMapping(method = RequestMethod.POST)
     public Content post(@RequestBody  Content content, Principal principal) {
+
+        content.setSomething(insecureClient.get());
 
         content.setUsername(principal.getName());
         return content;

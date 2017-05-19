@@ -9,6 +9,16 @@ public class Content {
 
     private String text;
 
+    public Something getSomething() {
+        return something;
+    }
+
+    public void setSomething(Something something) {
+        this.something = something;
+    }
+
+    private Something something;
+
     public String getUsername() {
         return username;
     }
