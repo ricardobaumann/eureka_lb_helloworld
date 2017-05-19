@@ -5,9 +5,29 @@ package com.github.ricardobaumann.eureka;
  */
 public class Content {
 
-    private Long id;
+    private Long id = 1L;
 
-    private String text;
+    private String text = "something";
+
+    public Something getSomething() {
+        return something;
+    }
+
+    public void setSomething(Something something) {
+        this.something = something;
+    }
+
+    private Something something;
+
+    public String getUsername() {
+        return username;
+    }
+
+    public void setUsername(String username) {
+        this.username = username;
+    }
+
+    private String username;
 
     public Long getId() {
         return id;

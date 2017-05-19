@@ -15,7 +15,7 @@
         <module>content</module>
         <module>insecure</module>
         <module>reverse_proxy</module>
-        <module>config_service</module>
+        <module>config-microservice</module>
     </modules>
 
 

@@ -2,9 +2,6 @@ spring:
   profiles: default
   application:
     name: insecure
-  cloud:
-    config:
-      uri: http://localhost:8888 #it doesnt support loadbalanced config server so far
 encrypt:
   failOnError: false
 
@@ -29,9 +26,6 @@ spring:
   profiles: docker
   application:
      name: insecure  # Service registers under this name
-  cloud:
-      config:
-        uri: http://configserver:8888
 
 # HTTP Server
 server:
