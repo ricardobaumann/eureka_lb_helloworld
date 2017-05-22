@@ -1,10 +1,6 @@
 package com.github.ricardobaumann.eureka;
 
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.MediaType;
-import org.springframework.security.core.Authentication;
-import org.springframework.security.core.context.SecurityContextHolder;
-import org.springframework.security.oauth2.client.OAuth2ClientContext;
 import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
@@ -25,6 +21,9 @@ public class ContentController {
     @Autowired
     private ContentLookupClient contentLookupClient;
 
+    @Autowired
+    private ContentService contentService;
+
     @RequestMapping(method = RequestMethod.GET)
     public Content getContent() {
         return new Content();
@@ -39,6 +38,11 @@ public class ContentController {
 
         content.setUsername(principal.getName());
         return content;
+    }
+
+    @RequestMapping(method = RequestMethod.GET,path = "open")
+    public Something openCircuit() {
+        return contentService.get();
     }
 
 }
