@@ -1,8 +1,17 @@
 package com.github.ricardobaumann.eureka;
 
-import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
-import org.springframework.beans.factory.annotation.Autowired;
+import com.fasterxml.jackson.databind.JsonNode;
+import com.fasterxml.jackson.databind.ObjectMapper;
+import com.google.common.io.Resources;
+import org.apache.commons.lang.StringUtils;
+import org.springframework.beans.factory.annotation.Value;
+import org.springframework.core.io.Resource;
 import org.springframework.stereotype.Service;
+
+import javax.annotation.PostConstruct;
+import java.nio.charset.Charset;
+import java.util.HashMap;
+import java.util.Map;
 
 /**
  * Created by ricardobaumann on 5/22/17.
@@ -10,19 +19,29 @@ import org.springframework.stereotype.Service;
 @Service
 public class ContentService {
 
-    @Autowired
-    private InsecureClient insecureClient;
+    private final Resource[] jsonResourceFiles;
+    private final Map<String, JsonNode> nodeMap = new HashMap<>();
+    private ObjectMapper objectMapper = new ObjectMapper();
 
-    @HystrixCommand(fallbackMethod = "fallback")
-    public Something get() {
-        System.out.println("Getting from insecure");
-        return insecureClient.get();
+    ContentService(final @Value("classpath*:content.*.json") Resource[] jsonResourceFiles) {
+        this.jsonResourceFiles = jsonResourceFiles;
     }
 
-    public Something fallback(Throwable throwable) {
-        System.out.println("Getting from fallback");
-        throwable.printStackTrace();
-        return new Something();
+    @PostConstruct
+    private void initCache() {
+        try {
+            for (Resource resource: jsonResourceFiles) {
+                final String content = Resources.toString(resource.getURL(), Charset.forName("UTF-8"));
+                final String contentName = StringUtils.remove(resource.getFilename(),".json");
+                nodeMap.put(contentName,objectMapper.readTree(content));
+            }
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+    }
+
+    public Content getContent(String name) {
+        return new Content(nodeMap.get(name),name);
     }
 
 }

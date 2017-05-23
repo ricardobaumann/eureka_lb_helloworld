@@ -1,47 +1,28 @@
 package com.github.ricardobaumann.eureka;
 
+import com.fasterxml.jackson.databind.JsonNode;
+import org.springframework.boot.test.autoconfigure.orm.jpa.DataJpaTest;
+
 /**
  * Created by ricardobaumann on 10/10/16.
  */
+
 public class Content {
 
-    private Long id = 1L;
+    private JsonNode body;
 
-    private String text = "something";
+    private String name;
 
-    public Something getSomething() {
-        return something;
+    public Content(JsonNode body, String name) {
+        this.body = body;
+        this.name = name;
     }
 
-    public void setSomething(Something something) {
-        this.something = something;
+    public JsonNode getBody() {
+        return body;
     }
 
-    private Something something;
-
-    public String getUsername() {
-        return username;
-    }
-
-    public void setUsername(String username) {
-        this.username = username;
-    }
-
-    private String username;
-
-    public Long getId() {
-        return id;
-    }
-
-    public void setId(Long id) {
-        this.id = id;
-    }
-
-    public String getText() {
-        return text;
-    }
-
-    public void setText(String text) {
-        this.text = text;
+    public String getName() {
+        return name;
     }
 }
