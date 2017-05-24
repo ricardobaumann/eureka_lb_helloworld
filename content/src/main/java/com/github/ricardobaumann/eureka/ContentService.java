@@ -1,5 +1,6 @@
 package com.github.ricardobaumann.eureka;
 
+import com.fasterxml.jackson.databind.JsonMappingException;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.google.common.io.Resources;
@@ -24,7 +25,7 @@ public class ContentService {
     private final RelatedContentClient relatedContentClient;
     private ObjectMapper objectMapper = new ObjectMapper();
 
-    ContentService(final @Value("classpath*:content.*.json") Resource[] jsonResourceFiles,
+    ContentService(final @Value("classpath*:**/*.json") Resource[] jsonResourceFiles,
                    final RelatedContentClient relatedContentClient) {
         this.jsonResourceFiles = jsonResourceFiles;
         this.relatedContentClient = relatedContentClient;
@@ -36,7 +37,11 @@ public class ContentService {
             for (Resource resource: jsonResourceFiles) {
                 final String content = Resources.toString(resource.getURL(), Charset.forName("UTF-8"));
                 final String contentName = StringUtils.remove(resource.getFilename(),".json");
-                nodeMap.put(contentName,objectMapper.readTree(content));
+                try {
+                    nodeMap.put(contentName,objectMapper.readTree(content));
+                } catch (JsonMappingException jme) {
+                    System.err.println("Failed to parse");
+                }
             }
         } catch (Exception e) {
             e.printStackTrace();
