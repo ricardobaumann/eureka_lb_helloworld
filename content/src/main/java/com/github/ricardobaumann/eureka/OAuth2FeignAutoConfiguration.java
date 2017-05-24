@@ -24,18 +24,16 @@ public class OAuth2FeignAutoConfiguration {
     public RequestInterceptor requestTokenBearerInterceptor() {
 
         return requestTemplate -> {
-            try {
+
                 Authentication authentication = SecurityContextHolder.getContext().getAuthentication();
-                OAuth2AuthenticationDetails details = (OAuth2AuthenticationDetails) authentication.getDetails();
-                if (details!=null) {
-                    requestTemplate.header("Authorization", "Bearer " + details.getTokenValue());
-                    requestTemplate.header("Accept","application/json");
-                    requestTemplate.header("Content-Type","application/json");
+                if (authentication!=null) {
+                    OAuth2AuthenticationDetails details = (OAuth2AuthenticationDetails) authentication.getDetails();
+                    if (details != null) {
+                        requestTemplate.header("Authorization", "Bearer " + details.getTokenValue());
+                    }
                 }
-            } catch (Exception e) {
-                System.err.println("Error trying to forward auth");
-                e.printStackTrace();
-            }
+                requestTemplate.header("Accept","application/json");
+                requestTemplate.header("Content-Type","application/json");
 
         };
     }

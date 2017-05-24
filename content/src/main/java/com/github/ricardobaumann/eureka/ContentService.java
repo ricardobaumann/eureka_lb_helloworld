@@ -21,10 +21,13 @@ public class ContentService {
 
     private final Resource[] jsonResourceFiles;
     private final Map<String, JsonNode> nodeMap = new HashMap<>();
+    private final RelatedContentClient relatedContentClient;
     private ObjectMapper objectMapper = new ObjectMapper();
 
-    ContentService(final @Value("classpath*:content.*.json") Resource[] jsonResourceFiles) {
+    ContentService(final @Value("classpath*:content.*.json") Resource[] jsonResourceFiles,
+                   final RelatedContentClient relatedContentClient) {
         this.jsonResourceFiles = jsonResourceFiles;
+        this.relatedContentClient = relatedContentClient;
     }
 
     @PostConstruct
@@ -41,7 +44,7 @@ public class ContentService {
     }
 
     public Content getContent(String name) {
-        return new Content(nodeMap.get(name),name);
+        return new Content(nodeMap.get(name),name, relatedContentClient.get(name));
     }
 
 }
