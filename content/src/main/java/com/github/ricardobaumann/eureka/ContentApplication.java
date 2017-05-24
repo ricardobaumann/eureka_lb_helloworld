@@ -19,7 +19,7 @@ import org.springframework.security.oauth2.config.annotation.web.configuration.E
 @EnableFeignClients
 @EnableHystrix
 @EnableCircuitBreaker
-public class Application {
+public class ContentApplication {
 
     /**
      * Run the application using Spring Boot and an embedded servlet engine.
@@ -31,6 +31,6 @@ public class Application {
         // Tell server to look for registration.properties or registration.yml
         System.setProperty("spring.config.name", "content");
 
-        SpringApplication.run(Application.class, args);
+        SpringApplication.run(ContentApplication.class, args);
     }
 }
