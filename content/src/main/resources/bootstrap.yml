@@ -1,0 +1,4 @@
+spring.cloud:
+    config:
+      enabled: true
+      uri: ${configserver.url:http://localhost:8888}
