@@ -1,0 +1,71 @@
+# Spring properties
+spring:
+  profiles: default
+  application:
+     name: comment  # Service registers under this name
+
+# HTTP Server
+server:
+  port: 7777   # HTTP (Tomcat) port
+
+# Discovery Server Access
+#  1. DEV ONLY: Reduce the lease renewal interval to speed up registration
+#  2. Define URL of registration server (defaultZone)
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://localhost:1111/eureka/
+  instance:
+    leaseRenewalIntervalInSeconds: 5   # DO NOT DO THIS IN PRODUCTION
+
+#  3. If using the Angel release-train ONLY, give the process a unique instance id
+#     so that multiple instances can register when running on SAME host.  This is
+#     not needed since release-train Brixton.
+#     NOTE-1: spring.application.instance_id is only set when run on Cloud Foundry,
+#             so we fallback on the server-port when it is not defined
+#     NOTE-2: Syntax ${x:${y}} = use $x if set, otherwise use $y
+#   metadataMap:
+#     instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+
+
+---
+# Spring properties
+spring:
+  profiles: docker
+  application:
+     name: comment  # Service registers under this name
+
+# HTTP Server
+server:
+  port: 8080   # HTTP (Tomcat) port
+
+
+# Discovery Server Access
+#  1. DEV ONLY: Reduce the lease renewal interval to speed up registration
+#  2. Define URL of registration server (defaultZone)
+eureka:
+  instance:
+    preferIpAddress: true
+    leaseRenewalIntervalInSeconds: 1
+    leaseExpirationDurationInSeconds: 2
+  client:
+    registryFetchIntervalSeconds: 5
+    instanceInfoReplicationIntervalSeconds: 5
+    initialInstanceInfoReplicationIntervalSeconds: 5
+    serviceUrl:
+      defaultZone: http://registry:1111/eureka/
+
+#  3. If using the Angel release-train ONLY, give the process a unique instance id
+#     so that multiple instances can register when running on SAME host.  This is
+#     not needed since release-train Brixton.
+#     NOTE-1: spring.application.instance_id is only set when run on Cloud Foundry,
+#             so we fallback on the server-port when it is not defined
+#     NOTE-2: Syntax ${x:${y}} = use $x if set, otherwise use $y
+#   metadataMap:
+#     instanceId: ${spring.application.name}:${spring.application.instance_id:${server.port}}
+
+
+
+
+
+
