@@ -86,6 +86,12 @@
             <artifactId>spring-cloud-starter-hystrix</artifactId>
         </dependency>
 
+        <!-- https://mvnrepository.com/artifact/org.springframework.cloud/spring-cloud-config-client -->
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-config-client</artifactId>
+        </dependency>
+
         <!-- https://mvnrepository.com/artifact/com.netflix.feign/feign-core -->
         <dependency>
             <groupId>com.netflix.feign</groupId>
