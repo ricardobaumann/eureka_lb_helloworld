@@ -23,18 +23,4 @@ public class ContentController {
         return contentService.getContent(name);
     }
 
-    @RequestMapping(method = RequestMethod.POST)
-    public Content post(@RequestBody  Content content, Principal principal) {
-
-
-        //TODO post
-        //content.setSomething(insecureClient.get());
-
-        //System.out.print("Making a crazy request to content to get "+contentLookupClient.get().getText());
-
-        //content.setUsername(principal.getName());
-        return content;
-    }
-
-
 }
