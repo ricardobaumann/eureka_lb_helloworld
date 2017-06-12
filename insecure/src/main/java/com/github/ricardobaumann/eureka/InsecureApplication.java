@@ -1,5 +1,7 @@
 package com.github.ricardobaumann.eureka;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.EnableAutoConfiguration;
@@ -19,6 +21,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping(produces = "application/json")
 public class InsecureApplication {
+
+    private static Logger log = LoggerFactory.getLogger(InsecureApplication.class);
 
     /**
      * Run the application using Spring Boot and an embedded servlet engine.
@@ -40,6 +44,7 @@ public class InsecureApplication {
     public Something get() {
         Something something = new Something();
         something.setText(environment.getProperty("test"));
+        log.info("Testing sleuth");
         return something;
     }
 
