@@ -1,0 +1,11 @@
+spring:
+  profiles: default
+  application:
+     name: appname  # Service registers under this name
+
+server.port: 8080
+
+spring.cloud:
+    config:
+      enabled: true
+      uri: ${configserver.url:http://localhost:8888}
