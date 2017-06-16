@@ -1,0 +1,9 @@
+server:
+  port: 9123
+
+spring:
+    application:
+        name: noneureka
+
+eureka:
+  baseUrl: "http://localhost:1111/eureka/apps/"
